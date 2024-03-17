@@ -1,0 +1,88 @@
+/* ... existing styles ... */
+
+.registration-section {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    min-height: 80vh; /* Adjust the height as needed */
+    padding: 50px 0;
+}
+
+.registration-box {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+.registration-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#employer-registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Provides consistent space between form fields */
+}
+
+#employer-registration-form label {
+    margin-bottom: 5px;
+}
+
+#employer-registration-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 20px; /* Space above the button */
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.registration-box p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sign-in-link {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.sign-in-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer styles if needed */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsive styles if needed */
+@media (max-width: 768px) {
+    .registration-section {
+        padding: 20px;
+    }
+    .registration-box {
+        margin: 10px;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="employer-site.css">
+    <link rel="stylesheet" href="header.css">
+    <title>Employer Site - 招聘平台</title>
+</head>
+
+<body>
+
+<div class="header">
+    <div class="logo">MCI-Group-L</div>
+    <div class="menu">
+        <a href="index.html">Homepage</a>
+        <a href="signIn.html">Profile</a>
+        <a href="signIn.html">Career Advice</a>
+        <a href="signIn.html">Company Reviews</a>
+        <a href="signIn.html">Rating System</a>
+    </div>
+    <div class="user-actions">
+        <a href="signIn.html">Sign In</a>
+        <a href="employer-site.html" class="employer-link">Employee Site</a>
+        <a href="employer-site.html" class="employer-link">Employer Site</a>
+    </div>
+</div>
+
+
+    <div class="employer-container">
+        <section class="auth-section">
+            <div class="signin-area">
+                <h2>Employer Sign In</h2>
+                <form class="auth-form">
+                    <!-- Sign In Form -->
+                    <label for="employer-email">Email:</label>
+                    <input type="email" id="employer-email" name="employer-email" required>
+
+                    <label for="employer-password">Password:</label>
+                    <input type="password" id="employer-password" name="employer-password" required>
+
+                    <button type="submit" class="btn">Sign In</button>
+
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </form>
+            </div>
+
+            <div class="register-area">
+                <h2>New Employer Registration</h2>
+                <form class="auth-form">
+                    <!-- Registration Form -->
+                    <label for="new-employer-email">Email:</label>
+                    <input type="email" id="new-employer-email" name="new-employer-email" required>
+
+                    <label for="new-employer-password">Password:</label>
+                    <input type="password" id="new-employer-password" name="new-employer-password" required>
+
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                    <button type="submit" class="btn">Register</button>
+                </form>
+            </div>
+        </section>
+
+    </div>
+    <div class="footer">
+        <!-- Footer content here -->
+    </div>
+    <script>
+        // JavaScript for handling form submission, modal popups, validation, etc.
+    </script>
+</body>
+
+</html>

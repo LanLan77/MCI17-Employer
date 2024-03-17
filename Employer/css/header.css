@@ -1,0 +1,117 @@
+body, h1, h2, h3, p, a {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #2c3e50;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center; /* 确保子元素垂直居中 */
+
+    list-style: none;
+    margin: 0px;
+    box-shadow: 0 2px 5px lightgrey;
+    overflow: hidden;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header .menu a, .header .user-actions a {
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+
+    padding: 10px 20px;
+    align-items: center; /* 垂直居中文本 */
+    height: 100%; /* 使链接高度与父元素一致 */
+}
+
+.header .user-actions .employer-link {
+    background-color: #e74c3c;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.header .menu a, .header .user-actions a {
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    padding: 10px 20px;
+    /* display: flex;  *//* Using flex to center the content */
+    align-items: center; /* Centering content vertically */
+    height: 100%;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.header .menu a:hover, .header .menu a:focus,
+.header .user-actions a:hover, .header .user-actions a:focus {
+    background-color: #111; /* Darker background on hover and focus */
+}
+
+.header .user-actions .employer-link:hover,
+.header .user-actions .employer-link:focus {
+    background-color: #c0392b; /* Slightly darker red for the employer link */
+    text-decoration: none; /* Ensures text-decoration doesn't change on hover/focus */
+}
+
+
+
+.search-section {
+    background-color: #483d8b; /* Dark blue background */
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.search-box {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-flex;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.search-box input[type=text], .search-box select {
+    border: none;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.search-box button {
+    background-color: #e74c3c; /* Seek button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.extra-options a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-top: 10px;
+}
+
+.main-content {
+    padding: 20px;
+    background-color: #f8f8f8; /* Light grey background */
+}
+
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
+}
+
+/* Responsive adjustments might be needed here */
