@@ -1,0 +1,66 @@
+.employer-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.auth-section {
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px; /* Provides space between sign-in and registration areas */
+}
+
+.signin-area, .register-area {
+    flex: 1;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-form label {
+    margin-top: 10px;
+}
+
+.auth-form input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.forgot-password {
+    color: #2c3e50;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* You can add more styles for header, footer, and other elements as needed */
