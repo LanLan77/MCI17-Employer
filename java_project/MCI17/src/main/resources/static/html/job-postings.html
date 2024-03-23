@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/job-postings.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <title>Job Postings</title>
+</head>
+<body>
+
+<div class="header">
+    <div class="logo">MCI-Group-L</div>
+    <div class="menu">
+        <a href="/" class="active">Homepage</a>
+        <a href="#">Account</a>
+        <a href="job-postings.html">Job Postings</a>
+        <a href="resume-browser.html">Resume Browser</a>
+        <a href="#">Interviews</a>
+        <a href="#">Hiring</a>
+        <a href="#">Evaluations</a>
+        <a href="#">Analytics</a>
+    </div>
+    <div class="user-actions">
+        <a href="signIn.html">Sign In</a>
+        <a href="employer-site.html" class="employer-link">Employee Site</a>
+    </div>
+</div>
+
+
+<div class="job-posting-container">
+    <h2>Post a Job</h2>
+    <form class="job-posting-form">
+        <label for="position">Position:</label>
+        <input type="text" id="position" name="position" required>
+
+        <label for="description">Job Description:</label>
+        <textarea id="description" name="description" required></textarea>
+
+        <label for="category">Category:</label>
+        <select id="category" name="category">
+            <option value="0">Any Classification</option>
+            <option value="bartender">Bartender (酒保)</option>
+            <option value="waitstaff">Wait Staff (服务员)</option>
+            <option value="retailassistant">Retail Assistant (零售助理)</option>
+            <option value="barista">Barista (咖啡师)</option>
+            <option value="deliverydriver">Delivery Driver (送货司机)</option>
+            <option value="tutor">Tutor (家教)</option>
+            <option value="cleaner">Cleaner (清洁工)</option>
+            <option value="receptionist">Receptionist (接待员)</option>
+            <option value="cashier">Cashier (收银员)</option>
+            <option value="cookassistant">Cook Assistant (厨师助理)</option>
+            <option value="warehouseworker">Warehouse Worker (仓库工人)</option>
+            <option value="petwalker">Pet Walker (遛狗人员)</option>
+            <option value="babysitter">Babysitter (保姆)</option>
+            <option value="gymassistant">Gym Assistant (健身房助理)</option>
+            <option value="housekeeper">Housekeeper (管家)</option>
+            <option value="securityguard">Security Guard (保安)</option>
+            <option value="eventstaff">Event Staff (活动员工)</option>
+            <option value="promoter">Promoter (推销员)</option>
+            <option value="translator">Translator (翻译)</option>
+            <option value="beautician">Beautician (美容师)</option>
+            <option value="other">Other (其他)</option>
+        </select>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+
+        <label for="education">Education:</label>
+        <input type="text" id="education" name="education" required>
+
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" name="salary" required>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required>
+
+        <label for="postcode">Postcode:</label>
+        <input type="number" id="postcode" name="postcode" required>
+
+        <label for="experience">Experience:</label>
+        <select id="experience" name="experience">
+            <option value="none">No experience</option>
+            <option value="1">0.5+ years</option>
+            <option value="1">1+ years</option>
+            <option value="2">2+ years</option>
+            <option value="5">5+ years</option>
+        </select>
+
+        <!-- Added timetable fields -->
+        <label>Work Schedule:</label>
+        <div class="work-schedule">
+            <div class="day">
+                <label>Monday:</label>
+                <input type="checkbox" name="monday_morning"> Morning
+                <input type="checkbox" name="monday_afternoon"> Afternoon
+                <input type="checkbox" name="monday_evening"> Evening
+            </div>
+            <div class="day">
+                <label>Tuesday:</label>
+                <input type="checkbox" name="tuesday_morning"> Morning
+                <input type="checkbox" name="tuesday_afternoon"> Afternoon
+                <input type="checkbox" name="tuesday_evening"> Evening
+            </div>
+            <div class="day">
+                <label>Wednesday:</label>
+                <input type="checkbox" name="wednesday_morning"> Morning
+                <input type="checkbox" name="wednesday_afternoon"> Afternoon
+                <input type="checkbox" name="wednesday_evening"> Evening
+            </div>
+            <div class="day">
+                <label>Thursday:</label>
+                <input type="checkbox" name="thursday_morning"> Morning
+                <input type="checkbox" name="thursday_afternoon"> Afternoon
+                <input type="checkbox" name="thursday_evening"> Evening
+            </div>
+            <div class="day">
+                <label>Friday:</label>
+                <input type="checkbox" name="friday_morning"> Morning
+                <input type="checkbox" name="friday_afternoon"> Afternoon
+                <input type="checkbox" name="friday_evening"> Evening
+            </div>
+            <div class="day">
+                <label>Saturday:</label>
+                <input type="checkbox" name="saturday_morning"> Morning
+                <input type="checkbox" name="saturday_afternoon"> Afternoon
+                <input type="checkbox" name="saturday_evening"> Evening
+            </div>
+            <div class="day">
+                <label>Sunday:</label>
+                <input type="checkbox" name="sunday_morning"> Morning
+                <input type="checkbox" name="sunday_afternoon"> Afternoon
+                <input type="checkbox" name="sunday_evening"> Evening
+            </div>
+        </div>
+
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</div>
+
+
+<!-- Existing Work Schedule section -->
+<!-- ... -->
+
+<!-- Summary Table -->
+<div class="summary-container">
+    <h3>Selected Work Schedule Summary</h3>
+    <table id="schedule-summary" border="1">
+        <thead>
+        <tr>
+            <th>Day</th>
+            <th>Morning</th>
+            <th>Afternoon</th>
+            <th>Evening</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- This will be populated using JavaScript -->
+        </tbody>
+    </table>
+</div>
+
+<script>
+    // Select all checkboxes
+    const checkboxes = document.querySelectorAll('.work-schedule input[type="checkbox"]');
+    const summaryTableBody = document.querySelector('#schedule-summary tbody');
+
+    // Function to update the summary table
+    function updateSummary() {
+        // Clear the table first
+        summaryTableBody.innerHTML = '';
+
+        // Object to hold the summary data
+        const summaryData = {};
+
+        // Iterate over checkboxes to gather data
+        checkboxes.forEach(checkbox => {
+            const [day, time] = checkbox.name.split('_'); // Assuming the name is in 'monday_morning' format
+            if (!summaryData[day]) {
+                summaryData[day] = {
+                    morning: false,
+                    afternoon: false,
+                    evening: false
+                };
+            }
+            if (checkbox.checked) {
+                summaryData[day][time] = true;
+            }
+        });
+
+        // Create table rows based on the summary data
+        for (const [day, times] of Object.entries(summaryData)) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+            <td>${day.charAt(0).toUpperCase() + day.slice(1)}</td>
+            <td>${times.morning ? '✔' : ''}</td>
+            <td>${times.afternoon ? '✔' : ''}</td>
+            <td>${times.evening ? '✔' : ''}</td>
+        `;
+            summaryTableBody.appendChild(row);
+        }
+    }
+
+    // Event listener for checkbox changes
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', updateSummary);
+    });
+
+    // Initial update on page load
+    updateSummary();
+</script>
+
+
+
+
+<div class="footer">
+    <p>© 2024 Job Platform, Inc.</p>
+</div>
+
+</body>
+</html>
